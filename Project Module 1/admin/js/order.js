@@ -13,6 +13,35 @@ const handleStatusCodeOrder = (statusCode)=>{
 
 let orders = JSON.parse(localStorage.getItem("orders"))||[];
 
+// total of page
+let totalOrder = orders.length; // tổng số sp
+let count = 5;// số sp trên 1 trang
+let pageCurrent = 0;
+let totalPage = Math.ceil(totalOrder/count); // tổng số trang
+
+
+// đổ ra giao diện
+const showPagination = ()=>{
+    let links = "";
+for (let i = 0; i < totalPage; i++) {
+   links+= `<li class="page-item ${i==pageCurrent?'active':''}" onclick="handlePagination(${i})"><a class="page-link" href="#">${i+1}</a></li>`
+}
+
+document.querySelector(".pagination").innerHTML=  `
+${links}`
+}
+
+// phần trang  : số trang hiện tại / số phần tử trên 1 trang
+const handlePagination= (page = 0)=>{
+    pageCurrent  = page
+    orders.sort((a, b) =>b.user_id - a.user_id);
+    let orderPaginate = orders.filter((p,index)=>(index>=(pageCurrent*count)&&index<(pageCurrent+1)*count))
+    showListUser(orderPaginate)
+    showPagination()
+}
+
+
+
   // tổng giá sản phảm
   let total_price ="";
     for (let i = 0; i < orders.length; i++) {

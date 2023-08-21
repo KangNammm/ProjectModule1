@@ -17,7 +17,7 @@ const handleLogIn = ()=>{
     localStorage.setItem("usernameLogin", JSON.stringify(usernameLogin));
 
     if(usernameLogin.role ==="ADMIN"){
-        location.href= "http://127.0.0.1:5500/Project%20Module%201/admin/index.html";
+        location.href= "../admin/category.html";
     }else{
         location.href = "../index.html"
     }

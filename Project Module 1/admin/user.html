@@ -37,11 +37,11 @@
                 <li class="sidebar-header">
                     Pages
                 </li>
-                <li class="sidebar-item ">
+                <!-- <li class="sidebar-item ">
                     <a class="sidebar-link" href="index.html">
                         <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Chart</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="category.html">
                         <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Category</span>
@@ -260,10 +260,10 @@
                                     <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#addModal">+ Create new Account</button>
                                 </a> -->
                                 <form class="d-flex" role="search">
-                                    <input class="form-control me-2 fst-italic" type="search"
+                                    <input id="search" class="form-control me-2 fst-italic" type="search"
                                            placeholder="Enter user's name... "
                                            aria-label="Search">
-                                    <button class="btn btn-outline-info" type="submit">Search</button>
+                                    <button onclick="handleSearch()" class="btn btn-outline-info" type="button">Search</button>
                                 </form>
                             </div>
                         </nav>
@@ -575,7 +575,7 @@
         });
     });
 </script>
-<script src="../user/js/logout.js"></script>
+<!-- <script src="../user/js/logout.js"></script> -->
 <script src="./js/user.js"></script>
 </body>
 

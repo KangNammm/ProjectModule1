@@ -153,7 +153,7 @@ const handleUpdateCategory = ()=>{
 
 const handleSearch = ()=>{
     let category = document.getElementById("search").value;
-    let categoriesSearch = categories.filter(category => category.name.toLowerCase().includes(category.toLowerCase()));
+    let categoriesSearch = categories.filter(cate => cate.category.toLowerCase().includes(category.toLowerCase()));
     showListCategory(categoriesSearch)
 }
 

@@ -61,18 +61,39 @@ window.onclick = function (event) {
   }
 }
 
+
+
+
 // dang nhap de payment
 const handleLogInForPayMent = ()=>{
   let usernameLogin = JSON.parse(localStorage.getItem("usernameLogin"))||[];
-  let date = new Date();
+  const users = JSON.parse(localStorage.getItem("users"))
+
+  const index = users.findIndex(e => e.user_id == usernameLogin.user_id)
+
+  let date = new Date().toLocaleDateString();
   console.log("==>", usernameLogin);
   if(!usernameLogin){
     alert("Please log in for payment");
     location.href = "http://127.0.0.1:5500/Project%20Module%201/user/login.html";
-  } else{
+  }else if(users[index].cart.length == 0){
+    alert("Please add to cart");
+  }else{
 
     const orders = JSON.parse(localStorage.getItem("orders"))
     const users = JSON.parse(localStorage.getItem("users"))
+    // ham id tu tang 
+// const getNewId = ()=>{
+//   let max = 0;
+//   for (let i = 0; i < users.length; i++) {
+//       const element = users[i];
+//       if(max<element.user_id){
+//           max = element.user_id;
+//       }
+//   }
+//   return max+1;
+// }
+
     const index =users.findIndex(e =>  e.user_id == usernameLogin.user_id)
 
     const products = JSON.parse(localStorage.getItem("products"))

@@ -1,6 +1,11 @@
-let usernameLogin = JSON.parse(localStorage.getItem(usernameLogin))||[];
-if(usernameLogin != null && usernameLogin.role == "ADMIN"){
-document.getElementById("login").innerText = usernameLogin.username;
-}else{
-    location.href"http://127.0.0.1:5500/Project%20Module%201/admin/403.html"
+let usernameLogin = JSON.parse(localStorage.getItem("usernameLogin"));
+if(usernameLogin && usernameLogin.role == "USER"){
+    document.getElementById("username").innerText = usernameLogin.username;
+    location.href = "../../index.html"
+}
+else if (usernameLogin && usernameLogin.role == "ADMIN") {
+    location.href = "../admin/index.html"
+}
+else{
+    location.href = "../admin/403.html"
 }

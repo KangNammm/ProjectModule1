@@ -53,7 +53,7 @@ const handlePagination= (page = 0)=>{
 let str = "";
 for (let i = 0; i < categories.length; i++) {
     const element = categories[i];
-    str += `<option value="${element.category_id}">${element.name}</option>`;
+    str += `<option value="${element.category_id}">${element.category}</option>`;
 }
 document.getElementById("category").innerHTML = str;
 console.log(str);

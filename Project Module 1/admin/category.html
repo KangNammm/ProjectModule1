@@ -34,11 +34,11 @@
                 <li class="sidebar-header">
                     Pages
                 </li>
-                <li class="sidebar-item ">
+                <!-- <li class="sidebar-item ">
                     <a class="sidebar-link" href="index.html">
                         <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Chart</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="sidebar-item active">
                     <a class="sidebar-link" href="#">
                         <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Category</span>
@@ -257,9 +257,9 @@
                                     <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#addModal">+ Add new Category</button>
                                 </a>
                                 <form class="d-flex" role="search">
-                                    <input class="form-control me-2 fst-italic" type="search" placeholder="Enter category's name... "
+                                    <input id="search" class="form-control me-2 fst-italic" type="search" placeholder="Enter category's name... "
                                            aria-label="Search">
-                                    <button class="btn btn-outline-info" type="submit">Search</button>
+                                    <button onclick="handleSearch()" class="btn btn-outline-info" type="button">Search</button>
                                 </form>
                             </div>
                         </nav>
@@ -756,6 +756,6 @@
     });
 </script>
 <script src="./js/category.js"></script>
-<script src="../user/js/logout.js"></script>
+<!-- <script src="../user/js/logout.js"></script> -->
 </body>
 </html>         
