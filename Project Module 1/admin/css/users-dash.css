@@ -1,0 +1,11 @@
+.simplebar-content{
+    background-color: rgb(49, 115, 117);
+}
+.sidebar-link, a.sidebar-link{
+    background-color: rgb(49, 115, 117) !important;
+    /* color: whitesmoke; */
+    font-size: 20px !important;
+}
+.sidebar-brand {
+    font-size: 30px !important;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/project.css">
+    <link rel="stylesheet" href="./css/img_hover.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="img-nav">
+                <i class="fa-sharp fa-solid fa-car-side"> k is the car</i>
+            </div>
+            <div class="content-nav dropdown-center">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/Project%20Module%201/index.html">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Introduce</a></li>
+                    <li id="cha" class="nav-item">
+                        <a id="dropdown_menu" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Brand Car
+                        </a>
+                        <ul id="hidden" class="dropdown-menu hiden con">
+                          <li><a class="dropdown-item" href="#">Mercedes-Benz</a></li>
+                          <li><a class="dropdown-item" href="#">BMW</a></li>
+                          <li><a class="dropdown-item" href="#">Rolls Royce</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">View more...</a></li>
+                        </ul>
+                      </li>
+                </ul>
+                <!-- <form>
+                    <input type="text" name="search" placeholder="Search for products..." />
+                    <button onclick="handleSearch()" type="button"><i class="fa fa-search " aria-hidden="true"></i></button>
+                </form> -->
+            </div>
+            <!-- The Modal -->
+            <button id="cart">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Shopping Cart
+            </button>
+            <button onclick="login()" id="login">
+                <i class="fa-solid fa-user-secret"></i>
+                Log In
+            </button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Products</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Products</span>
+                            <span class="cart-price cart-header cart-column">Price</span>
+                            <span class="cart-quantity cart-header cart-column">Quantity</span>
+                        </div>
+                        <div class="cart-items">
+
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Total:</strong>
+                            <span class="cart-total-price">0$</span>
+                        </div>
+                    </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary close-footer">Close</button>
+                            <button id="order" type="button" class="btn btn-primary" onclick="handleLogInForPayMent()">Payment</button>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+    </header>
+
+
+    <h2 class="sample">Products  <i class="fa-regular fa-hand-point-down"></i></h2>
+    <div class="products">
+            
+        <ul id="list_product">
+            <!-- <li class="main-product">
+                <div class="img-product">
+                    <img class="img-prd"
+                        src="../img/Mercedes-Benz SLS AMG Matt Limited Edition.jpg"
+                        alt="">
+                </div>
+                <div class="content-product">
+                    <h3 class="content-product-h3">Mercedes-Benz SLS AMG Matt Limited</h3>
+                    <div class="content-product-deltals">
+                        <div class="price">
+                            <span class="money">2800$</span>
+                        </div>
+                        <button type="button" class="btn btn-cart">Add to cart</button>
+                    </div>
+                </div>
+            </li> -->
+
+        </ul>
+    </div>
+
+<script src="./js/index.js"></script>
+<script src="./js/project.js"></script>
+<script src="./js/img_hover.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+
+</html>

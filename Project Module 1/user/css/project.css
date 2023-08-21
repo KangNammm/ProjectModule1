@@ -1,0 +1,346 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+li {
+    list-style: none;
+}
+
+/* header */
+.img-nav{
+    font-size: 30px;
+    text-decoration: underline;
+}
+nav {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    background: rgba(128, 128, 128, 0.316);
+}
+
+nav .content-nav {
+    display: flex;
+    line-height: 3rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 60%;
+}
+
+nav .content-nav ul {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.hiden {
+    display: none !important;
+}
+
+
+.dropdown-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.content-nav li{
+    font-size: 15px;
+}
+
+nav .content-nav ul li a {
+    text-decoration: none;
+    color: #43433e;
+    text-transform: uppercase;
+    padding: 0 15px;
+    font-weight: 800;
+    font-size: 20;
+}
+
+nav .content-nav ul li a:hover {
+    color: aqua;
+}
+
+.content-nav form {
+    position: relative;
+}
+
+.content-nav form input {
+    border: none;
+    background: #fff;
+    padding: 6px;
+    outline: none;
+    border-radius: 12px;
+}
+
+.content-nav form button {
+    padding: 0,3125rem;
+    border-radius: 12px;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    border: none;
+    outline: none;
+    background: #fff;
+}
+.img-product img{
+    width: 13rem;
+    height: 13rem;
+}
+
+.sample{
+    margin: 1.5rem;
+    padding-left: 5px;
+}
+
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 6,25rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    margin: 0 auto;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #84e8dc;
+    background: -moz-linear-gradient(-45deg, #84e8dc 0%, #f4ed8b 100%);
+    background: -webkit-linear-gradient(-45deg, #84e8dc 0%, #f4ed8b 100%);
+    background: linear-gradient(135deg, #84e8dc 0%, #f4ed8b 100%);
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    outline: 0;
+
+}
+
+.modal-body {
+    padding: 1rem;
+}
+
+.modal-footer {
+    display: flex;
+    border-top: 1px solid #aaaaaa;
+    padding: 1rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-top: 1px solid #aaaaaa;
+    padding: 1rem;
+}
+
+.modal-footer>:not(:first-child) {
+    margin-left: .25rem;
+}
+
+.btn {
+    cursor: pointer;
+    outline: none;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: all .2s ease-in-out;
+}
+
+.btn-secondary {
+    color: #292b2c;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0275d8;
+    border-color: #0275d8;
+}
+
+.modal-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #aaaaaa;
+    padding: 1rem;
+}
+
+h5.modal-title {
+    font-size: 1.5rem;
+}
+
+.close {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#cart {
+    font-size: 15px;
+    color: #fff;
+    background: gray;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    margin-left: 1rem;
+    padding: 15px;
+    cursor: pointer;
+}
+#login {
+    font-size: 15px;
+    color: #fff;
+    background: gray;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    margin-left: 1rem;
+    padding: 15px;
+    cursor: pointer;
+}
+#login a{
+    color: #fff;
+}
+
+#cart:hover, #login:hover {
+    border-color: aqua;
+}
+
+.wrapper {
+    padding: 2rem;
+}
+
+.products ul {
+    display: inline-block;
+    padding-left: 3.8rem;
+}
+
+.products ul .main-product {
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    display: block;
+    float: left;
+    width: fit-content;
+}
+
+.products ul .no-margin {
+    margin-right: 0;
+}
+
+.products ul .img-product img {
+    width: 300px;
+    border-radius: 5%;
+}
+
+
+.content-product .content-product-h3 {
+    padding: 8px 0;
+    overflow: hidden;
+    color: #222;
+    font-weight: 500;
+    font-size: 16px;
+    max-height: 3,125rem;
+    min-height: 3,125rem;
+    text-align: center;
+    line-height: 19px;
+    margin: 0 0 5px;
+}
+
+.content-product .content-product-deltals {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+}
+
+.main-product .content-product .content-product-deltals .price {
+    color: rgba(0, 0, 0, 0.64);
+    font-weight: 700;
+    margin-right: 1rem;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+.content-product .content-product-deltals .price .money {
+    vertical-align: middle;
+}
+
+.content-product .content-product-deltals .btn-cart {
+    background: gray;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.content-product .content-product-deltals .btn-cart:hover {
+    background: aqua;
+}
+
+.footer-item {
+    padding: .5rem 32px;
+    background: rgba(128, 128, 128, 0.316);
+
+
+}
+
+
+.footer-item .img-footer img {
+    width: 100%;
+}
+.footer-item .footer-pay {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+}
+
+.footer-item .social-footer {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 7px;
+}
+.footer-item .info{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-item .social-footer li a {
+    color: #222;
+    font-size: 2rem;
+}
+.social-footer h4{
+    margin: 0;
+}
+.footer-pay img{
+    width: 2.5rem;
+    height: 2.5rem;
+
+}
+

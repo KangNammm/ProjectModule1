@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+
+  <div class="container">
+    <input type="radio" name="tab" id="signin" checked="checked"/>
+    <input type="radio" name="tab" id="register"/>
+    <div class="pages">
+      <div class="page">
+        <div class="input">
+          <div class="title"><i class="material-icons"></i> Username</div>
+          <input id="loginUsername" class="text" type="text" placeholder=""/>
+        </div>
+        <div class="input">
+          <div class="title"><i class="material-icons"></i> Password</div>
+          <input id="loginPass" class="text" type="password" placeholder=""/>
+        </div>
+        <div id="error" class="form-text text-danger"></div>
+        <div class="input">
+          <input onclick="handleLogIn()" type="button" value="Sign In"/>
+        </div>
+        <br>
+        <!-- <span class="input"><a href="#">Forgot your password?</a></span> -->
+      </div>
+ 
+      <div class="page signup">
+        <div class="input">
+          <div class="title"><i class="material-icons"></i> Username</div>
+          <input id="username" class="text" type="text" placeholder=""/>
+        </div>
+        <div id="usernameError" class="form-text text-danger"></div>
+        <div class="input">
+          <div class="title"><i class="material-icons"></i> Full Name</div>
+          <input id="fullName" class="text" type="text" placeholder=""/>
+        </div>
+        <div id="fullNameError" class="form-text text-danger"></div>
+        <div class="input">
+          <div class="title"><i class="material-icons"></i> Email</div>
+          <input id="email" class="text" type="email" placeholder=""/>
+        </div>
+        <div id="emailError" class="form-text text-danger"></div>
+        <div class="input">
+          <div class="title"><i class="material-icons"></i> Password</div>
+          <input  id="password" class="text" type="password" placeholder="" />
+        </div>
+        <div id="passwordError" class="form-text text-danger"></div>
+        <div class="input">
+          <div class="title"><i class="material-icons"></i>Confirm Password</div>
+          <input  id="confirmPass" class="text" type="password" placeholder=""/>
+        </div>
+        <div id="confirmPassError" class="form-text text-danger"></div>
+        <div class="input">
+          <input onclick=" handleSigUp()" type="button" value="Sign Up !"/>
+        </div>
+      </div>
+    </div>
+    <div class="tabs">
+      <label class="tab" for="signin">
+        <div class="text">Sign In</div>
+      </label>
+      <label class="tab" for="register">
+        <div class="text">Register</div>
+      </label>
+    </div>
+  </div>
+    <script src="./js/login.js"></script>
+    <script src="./js/login_register.js"></script>
+</body>
+</html>

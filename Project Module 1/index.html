@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./user/css/project.css">
+    <link rel="stylesheet" href="./user/css/img_hover.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="img-nav">
+                <i class="fa-sharp fa-solid fa-car-side"> k is the car</i>
+            </div>
+            <div class="content-nav dropdown-center">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="http://127.0.0.1:5500/Project%20Module%201/user/productUser.html">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Introduce</a></li>
+                    <li id="cha" class="nav-item">
+                        <a id="dropdown_menu" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Categories
+                        </a>
+                        <ul id="hidden" class="dropdown-menu hiden con">
+                          <li><a class="dropdown-item" href="#">Mercedes-Benz</a></li>
+                          <li><a class="dropdown-item" href="#">BMW</a></li>
+                          <li><a class="dropdown-item" href="#">Rolls Royce</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">View more...</a></li>
+                        </ul>
+                      </li>
+                </ul>
+                <!-- <form>
+                    <input type="text" name="search" placeholder="Search for products..." />
+                    <button type="button"><i class="fa fa-search " aria-hidden="true"></i></button>
+                </form> -->
+            </div>
+            <!-- The Modal -->
+            <button id="cart">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Shopping Cart
+            </button>
+            <button onclick="login()" id="login">
+                <i class="fa-solid fa-user-secret"></i>
+                Log In
+            </button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Products</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Products</span>
+                            <span class="cart-price cart-header cart-column">Price</span>
+                            <span class="cart-quantity cart-header cart-column">Quantity</span>
+                        </div>
+                        <div class="cart-items">
+
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Total:</strong>
+                            <span class="cart-total-price">0$</span>
+                        </div>
+                    </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary close-footer">Close</button>
+                            <button id="order" type="button" class="btn btn-primary" onclick="handleLogInForPayMent()">Payment</button>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+    </header>
+
+    
+    <section class="wrapper">
+
+        <h2>Best-selling cars</h2>
+        <p>( These are the best-selling cars from the beginning of the year until now. )</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img src="./img/Mercedes-Benz-GLC43.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Mercedes-Benz-GLC43</h5>
+                  <p class="card-text">The car has a strong appearance to help users have the best experience.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 30 mins ago</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="./img/Mercedes AMG S63 Cabriolet Rental.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Mercedes AMG S63 Cabriolet Rental</h5>
+                  <p class="card-text">If you are traveling with your girlfriend what are you waiting for, choose this car right away.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 1 hours ago</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="./img/Mercedes-Benz EQS AMG.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Mercedes-Benz EQS AMG</h5>
+                  <p class="card-text">The car with the most advanced features helps protect the environment and save fuel.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Last updated 25 mins ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="sample">Samples</h2>
+          <p class="sample">( Products are just for viewing, not selling. )</p>
+
+          <div class="container1">
+            <div class="thumbex">
+              <div class="thumbnail"><a href="javascript:void(0)"> <img src="./img/Lamborghini-Sian-Roadster.jpg"/><span>Lamborghini</span></a></div>
+            </div>
+            <div class="thumbex"> 
+              <div class="thumbnail"><a href="javascript:void(0)"><img src="./img/Bugatti.jpg"/><span>Bugatti</span></a></div>
+            </div>
+            <div class="thumbex">
+              <div class="thumbnail"><a href="javascript:void(0)"><img src="./img/Koenigsegg.jpg"/><span>Koenigsegg</span></a></div>
+            </div>
+          </div>
+
+
+          <h2 class="sample">SuperCar</h2>
+          <p class="sample">( Supercar is a term that began to be commonly used in the 1980s to refer to expensive sports cars,
+            designed primarily with speed in mind.
+            Supercars differ from popular cars or ordinary sports cars in the following points :
+            The car increases speed very quickly.
+            Has a very high top speed.
+            Use of modern technologies.
+            Very expensive.
+            Renovation fees are also very high.
+            Only produced a small number. )</p>
+          <div id="container">
+            <div class="cover">
+             <div class="front" >jpg
+               <img src="./img/Lamborghini Veneno.jpg">    
+              </div>
+             <div class="back" >
+               <img src="./img/2012 Koenigsegg Agera Wallpapers.jpg">     
+              </div>
+               <div class="top" >
+               <img src="./img/Bugatti Chiron Adalah Kereta Terlaju Di Dunia.jpg">       
+              </div>
+             <div class="bottom" >
+               <img src="./img/Lamborghini Aventador.jpg"></div>
+             <div class="left" >
+               <img src="./img/Koenigsegg Regera.jpg">
+              </div>
+             <div class="right">
+               <img src="./img/Bugatti Mistral W16.jpg">    
+              </div>
+            </div>
+           </div>
+         
+          <h2 class="sample">This is where you can choose your car  <i class="fa-regular fa-hand-point-down"></i></h2>
+
+        <div class="products">
+            
+            <ul id="list_product">
+                <!-- <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="./img/Mercedes-Benz SLS AMG Matt Limited Edition.jpg"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Mercedes-Benz SLS AMG Matt Limited</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">2800$</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </li> -->
+                
+            </ul>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer-item">
+            <div class="footer-pay">
+                <h4>Payment methods :</h4>
+                <img src="./img/paypal.png" alt="">
+                <img src="./img/visa.png" alt="">
+                <img src="./img/mastercard.png" alt="">
+                
+            </div>
+                <div class="social-footer">
+                    <h4>Contact Us :</h4>
+                    <li><a href="https://www.facebook.com/">
+                        <i class="fa-brands fa-facebook"></i>
+                        </a></li>
+                    <li><a href="https://www.instagram.com/accounts/login/">
+                        <i class="fa-brands fa-instagram"></i>
+                        </a></li>
+                    <li><a href="https://twitter.com/">
+                        <i class="fa-brands fa-twitter"></i>
+                        </a></li>
+            </div>
+            <div class="info">
+                <span> Email : abcxyz@gmail.com</span>
+                <span> Phone Number : 0900686868</span>
+            </div>
+        </div>
+    </footer>
+    <script src="./user/js/logout.js"></script>
+    <script src="./user/js/index.js"></script>
+    <script src="./user/js/project.js"></script>
+    <script src="./user/js/img_hover.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+
+</html>
